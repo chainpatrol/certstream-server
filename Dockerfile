@@ -1,5 +1,15 @@
 FROM elixir:1.8-alpine
 
+# >>> BEGIN: Build args
+
+ARG HOST
+ARG PORT
+
+ENV HOST=$HOST
+ENV PORT=$PORT
+
+# <<< END: Build args
+
 WORKDIR /opt/app
 
 ENV HOME /opt/app
