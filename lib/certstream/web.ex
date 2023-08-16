@@ -136,7 +136,8 @@ defmodule Certstream.WebsocketServer do
     Logger.info("Starting web server on port #{get_port()}...")
     :cowboy.start_clear(
       :websocket_server,
-      [{:port, get_port()}],
+      # Start on all interfaces, ipv6 and ipv4
+      [{:port, get_port()}, {:ip, {0, 0, 0, 0, 0, 0, 0, 0}}],
       %{
         :env => %{
           :dispatch => :cowboy_router.compile([
