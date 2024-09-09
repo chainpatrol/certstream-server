@@ -4,7 +4,7 @@
     <p align="center">Aggregate and broadcast SSL certs as they're issued live.</p>
 </p>
 
-**Certstream-server** is a service written in elixir to aggregate, parse, and stream certificate data from multiple [certificate transparency logs](https://www.certificate-transparency.org/what-is-ct). It leverages the amazing power of elixir/erlang to achieve great network throughput and concurrency with very little resource usage.
+[**Certstream-server**](https://certstream.calidog.io/) is a service written in elixir to aggregate, parse, and stream certificate data from multiple [certificate transparency logs](https://www.certificate-transparency.org/what-is-ct). It leverages the amazing power of elixir/erlang to achieve great network throughput and concurrency with very little resource usage.
 
 This is a rewrite of the [original version written in python](https://github.com/CaliDog/certstream-server-python), and is much more efficient than the original and currently ships millions of certificates a day on a single Hetzner dedicated server without issue (\~250TB of data every month!).
 
